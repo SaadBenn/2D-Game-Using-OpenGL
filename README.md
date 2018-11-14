@@ -1,2 +1,2 @@
 # 2D-Breaker
-A simple 2D game using OpenGL. 
+A simple cross platform 2D arcade game using OpenGL API and Irrklang sound engine. 
