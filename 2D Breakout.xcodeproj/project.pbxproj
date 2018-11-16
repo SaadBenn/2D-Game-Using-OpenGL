@@ -14,6 +14,7 @@
 		1965E33121989B5900F39CB9 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1965E33021989B5900F39CB9 /* libglfw.3.2.dylib */; };
 		1965E33321989B6B00F39CB9 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1965E33221989B6B00F39CB9 /* libGLEW.2.1.0.dylib */; };
 		1965E33521989E9000F39CB9 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1965E33421989E9000F39CB9 /* glad.c */; };
+		1965E338219E51BB00F39CB9 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1965E337219E51BB00F39CB9 /* stb_image.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		1965E33021989B5900F39CB9 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		1965E33221989B6B00F39CB9 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		1965E33421989E9000F39CB9 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		1965E336219E517A00F39CB9 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		1965E337219E51BB00F39CB9 /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 			children = (
 				1965E33421989E9000F39CB9 /* glad.c */,
 				1965E3202197F68C00F39CB9 /* main.cpp */,
+				1965E336219E517A00F39CB9 /* stb_image.h */,
+				1965E337219E51BB00F39CB9 /* stb_image.cpp */,
 			);
 			path = "2D Breakout";
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1965E338219E51BB00F39CB9 /* stb_image.cpp in Sources */,
 				1965E3212197F68C00F39CB9 /* main.cpp in Sources */,
 				1965E33521989E9000F39CB9 /* glad.c in Sources */,
 			);
