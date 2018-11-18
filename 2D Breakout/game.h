@@ -8,36 +8,47 @@
 #ifndef game_h
 #define game_h
 
+#include <vector>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include "gamelevel.hpp"
 
 // represents the current state of the game
 enum GameState {
-    Game_Menu,
-    Game_Active,
-    Game_Win
+    GAME_ACTIVE,
+    GAME_MENU,
+    GAME_WIN
 };
 
-// class allows us to decouple all windowing code from gameplay
+// Initial size of the player paddle
+const glm::vec2 PLAYER_SIZE(100, 20);
+
+// Initial velocity of the player paddle
+const GLfloat PLAYER_VELOCITY(500.0f);
+
+// Combines all game-related data into a single class for
+// easy access to each of the components and manageability.
 class Game {
 public:
-    GameState State;
-    GLboolean Keys[1024];
-    GLuint Width, Height;
     
+    // Game state
+    GameState              State;
+    GLboolean              Keys[1024];
+    GLuint                 Width, Height;
+    std::vector<GameLevel> Levels;
+    GLuint                 Level;
+    
+    // Constructor/Destructor
     Game(GLuint width, GLuint height);
-    // destructor to free up the Game object
     ~Game();
     
-    // load all textures/shaders
+    // Initialize game state (load all shaders/textures/levels)
     void Init();
     
-    // updates all gameplay events
+    // GameLoop
     void ProcessInput(GLfloat dt);
-    // deals with ball movement and player events
     void Update(GLfloat dt);
-    // movement logic split from render logic
     void Render();
 };
 
-#endif /* game_h */
+#endif
