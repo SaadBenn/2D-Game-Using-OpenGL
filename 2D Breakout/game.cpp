@@ -4,6 +4,11 @@
 #include "gameobject.hpp"
 #include "ballobject.hpp"
 
+#include <irrklang/irrKlang.h>
+using namespace irrklang;
+
+ISoundEngine *SoundEngine = createIrrKlangDevice();
+
 // Game-related State data
 SpriteRenderer  *Renderer;
 GameObject      *Player;
@@ -56,6 +61,9 @@ void Game::Init() {
     Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("paddle"));
     glm::vec2 ballPos = playerPos + glm::vec2(PLAYER_SIZE.x / 2 - BALL_RADIUS, -BALL_RADIUS * 2);
     Ball = new BallObject(ballPos, BALL_RADIUS, INITIAL_BALL_VELOCITY, ResourceManager::GetTexture("face"));
+    
+    // background music
+    SoundEngine->play2D("breakout.mp3", GL_TRUE);
 }
 
 void Game::Update(GLfloat dt) {
