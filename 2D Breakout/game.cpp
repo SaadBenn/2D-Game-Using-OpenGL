@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include "game.h"
-#include "resource_manager.h"
+#include "resource_manager.hpp"
 
 Game::Game(GLuint width, GLuint height) : State(Game_Active), Keys(), Width(width), Height(height) {
     
