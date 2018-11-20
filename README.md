@@ -9,7 +9,7 @@ A simple cross platform 2D arcade game using OpenGL API and Irrklang sound engin
 5. The direction of the ball can be manipulated by how far the ball bounces from the paddle's center.
 
 # Note
-The aim of this project is to delve deeper into game development and graphics programming. In order to understand the different concepts associated with game development, I took up OpenGL API to reinforce the basics. 
+The aim of this project is to delve deeper into game development and graphics programming. In order to understand the different concepts associated with game development, I took up OpenGL API to reinforce the basics. This project is very small compared to the real world examples and there are a lot of improvements that can be made to make it scalable and more user-friendly.
 
 # References
 [IrrKlang](https://www.ambiera.com/irrklang/)
